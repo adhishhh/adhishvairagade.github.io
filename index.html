@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhish Vairagade | Embedded Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="circuit-loader">
+            <div class="loader-text">INITIALIZING SYSTEM...</div>
+            <div class="loader-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-bg" class="particles-bg"></div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor" class="custom-cursor"></div>
+    <div id="cursor-trail" class="cursor-trail"></div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Hero Section - Interactive Circuit Board -->
+        <section id="hero" class="hero-section">
+            <div class="circuit-board">
+                <div class="circuit-traces">
+                    <div class="trace trace-1"></div>
+                    <div class="trace trace-2"></div>
+                    <div class="trace trace-3"></div>
+                    <div class="trace trace-4"></div>
+                </div>
+
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <h1 class="hero-name">
+                        <span class="name-line">ADHISH</span>
+                        <span class="name-line">VAIRAGADE</span>
+                    </h1>
+                    <div class="hero-title">EMBEDDED SOFTWARE ENGINEER</div>
+                    <div class="hero-subtitle">Firmware • RTOS • Hardware Integration</div>
+                    <div class="system-status">
+                        <span class="status-indicator"></span>
+                        SYSTEM READY | Available for Immediate Start
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Monitor Widget -->
+            <div class="performance-monitor">
+                <div class="monitor-header">SYSTEM MONITOR</div>
+                <div class="monitor-stats">
+                    <div class="stat">
+                        <span class="stat-label">CPU</span>
+                        <div class="stat-bar"><div class="stat-fill cpu-usage"></div></div>
+                        <span class="stat-value">85%</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">RAM</span>
+                        <div class="stat-bar"><div class="stat-fill ram-usage"></div></div>
+                        <span class="stat-value">67%</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">NET</span>
+                        <div class="stat-bar"><div class="stat-fill net-usage"></div></div>
+                        <span class="stat-value">92%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Bar -->
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <div class="nav-items">
+                    <button class="nav-item active" data-section="about">
+                        <span class="nav-text">About</span>
+                        <div class="nav-glow"></div>
+                    </button>
+                    <div class="nav-separator">|</div>
+                    <button class="nav-item" data-section="skills">
+                        <span class="nav-text">Skills</span>
+                        <div class="nav-glow"></div>
+                    </button>
+                    <div class="nav-separator">|</div>
+                    <button class="nav-item" data-section="experience">
+                        <span class="nav-text">Experience</span>
+                        <div class="nav-glow"></div>
+                    </button>
+                    <div class="nav-separator">|</div>
+                    <button class="nav-item" data-section="projects">
+                        <span class="nav-text">Projects</span>
+                        <div class="nav-glow"></div>
+                    </button>
+                    <div class="nav-separator">|</div>
+                    <button class="nav-item" data-section="contact">
+                        <span class="nav-text">Contact</span>
+                        <div class="nav-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="summary-text">Embedded Software Engineer with 2+ years of experience delivering high-impact firmware and embedded systems solutions. Proven expertise in rapid prototyping, embedded C/C++ development, Python automation, RTOS applications, and hardware-software integration.</p>
+                        <div class="achievement-counters">
+                            <div class="counter">
+                                <span class="counter-number" data-target="40">0</span>
+                                <span class="counter-label">% Testing Efficiency</span>
+                            </div>
+                            <div class="counter">
+                                <span class="counter-number" data-target="15">0</span>
+                                <span class="counter-label">% System Reliability</span>
+                            </div>
+                            <div class="counter">
+                                <span class="counter-number" data-target="50000">0</span>
+                                <span class="counter-label">USD Cost Savings</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terminal-container">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span class="btn-close"></span>
+                                    <span class="btn-minimize"></span>
+                                    <span class="btn-maximize"></span>
+                                </div>
+                                <span class="terminal-title">adhish@embedded:~$</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div id="terminal-content" class="terminal-content"></div>
+                                <span class="terminal-cursor">|</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-container">
+                    <div class="skills-radar">
+                        <canvas id="skills-canvas" width="400" height="400"></canvas>
+                        <div class="radar-center">CORE</div>
+                    </div>
+                    <div class="skills-legend">
+                        <div class="skill-category">
+                            <h3>Languages</h3>
+                            <div class="skill-items">
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">MATLAB</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Embedded</h3>
+                            <div class="skill-items">
+                                <span class="skill-tag">Firmware Development</span>
+                                <span class="skill-tag">RTOS (UCOS-II)</span>
+                                <span class="skill-tag">Embedded Linux</span>
+                                <span class="skill-tag">Yocto Project</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Protocols</h3>
+                            <div class="skill-items">
+                                <span class="skill-tag">SPI</span>
+                                <span class="skill-tag">I2C</span>
+                                <span class="skill-tag">CAN</span>
+                                <span class="skill-tag">PCIe</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Hardware</h3>
+                            <div class="skill-items">
+                                <span class="skill-tag">ARM Cortex</span>
+                                <span class="skill-tag">PCB Design</span>
+                                <span class="skill-tag">JTAG</span>
+                                <span class="skill-tag">Oscilloscope</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <h2 class="section-title">Professional Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-year="2025">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Electrical Engineer</h3>
+                            <h4>Schlumberger Technology Services</h4>
+                            <span class="timeline-duration">Aug 2025 – Present</span>
+                            <ul class="timeline-achievements">
+                                <li>Developed HDL-compatible circuit monitoring systems improving system reliability by 15%</li>
+                                <li>Designed real-time protection circuits with zero system failures</li>
+                                <li>Partnered with cross-functional teams in automotive electronics</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2024">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Electrical Engineer</h3>
+                            <h4>Schlumberger Technology Services</h4>
+                            <span class="timeline-duration">Jul 2024 – Aug 2025</span>
+                            <ul class="timeline-achievements">
+                                <li>Delivered automated harness testing system cutting testing time by 40%</li>
+                                <li>Engineered propagation delay measurement system with 700μs timing accuracy</li>
+                                <li>Created Python-based datasheet extraction tool improving efficiency by 60%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2024">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Electrical Engineer Intern</h3>
+                            <h4>Schlumberger Technology Services</h4>
+                            <span class="timeline-duration">Jan 2024 – Jun 2024</span>
+                            <ul class="timeline-achievements">
+                                <li>Engineered software in C and Python cutting processing errors by 20%</li>
+                                <li>Utilized SPICE and LabVIEW for circuit design and control</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2023">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Embedded Software Intern</h3>
+                            <h4>Bitmapper Integrations</h4>
+                            <span class="timeline-duration">Jul 2023 – Dec 2023</span>
+                            <ul class="timeline-achievements">
+                                <li>Led OS development for i.MX8M Mini platforms reducing boot time by 30%</li>
+                                <li>Automated workflows reducing manual intervention by 25%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="0">
+                        <div class="project-face project-front">
+                            <div class="project-header">
+                                <h3>IMUHT Firmware Support</h3>
+                                <div class="project-status">ACTIVE</div>
+                            </div>
+                            <p>Communication drivers for stream bit accelerometers with inertial measurement integration</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C</span>
+                                <span class="tech-tag">Embedded Systems</span>
+                                <span class="tech-tag">Sensors</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="1">
+                        <div class="project-face project-front">
+                            <div class="project-header">
+                                <h3>Universal Harness Tester</h3>
+                                <div class="project-status">DEPLOYED</div>
+                            </div>
+                            <p>Automated micro-D connector testing system cutting testing times by 25%</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Automated Testing</span>
+                                <span class="tech-tag">Hardware Validation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="2">
+                        <div class="project-face project-front">
+                            <div class="project-header">
+                                <h3>Propagation Delay Measurement</h3>
+                                <div class="project-status">COMPLETED</div>
+                            </div>
+                            <p>Arduino Due and LabVIEW system achieving 95% accuracy in real-time signal detection</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Arduino</span>
+                                <span class="tech-tag">LabVIEW</span>
+                                <span class="tech-tag">Signal Processing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="3">
+                        <div class="project-face project-front">
+                            <div class="project-header">
+                                <h3>Rugged Camera System</h3>
+                                <div class="project-status">DEPLOYED</div>
+                            </div>
+                            <p>Real-time RTSP streaming on Embedded Linux improving reliability by 40%</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Embedded Linux</span>
+                                <span class="tech-tag">RTSP</span>
+                                <span class="tech-tag">Real-time</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="4">
+                        <div class="project-face project-front">
+                            <div class="project-header">
+                                <h3>Solar Smart Bench</h3>
+                                <div class="project-status">PROTOTYPE</div>
+                            </div>
+                            <p>RFID-enabled smart bench with solar power, BLE and Wi-Fi connectivity</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">RFID</span>
+                                <span class="tech-tag">BLE</span>
+                                <span class="tech-tag">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Initialize Connection</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:adhishvairagade0@gmail.com">adhishvairagade0@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+918149144250">+91-8149144250</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <a href="https://linkedin.com/in/adhishvairagade" target="_blank">linkedin.com/in/adhishvairagade</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🔗</div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub</span>
+                                <a href="https://github.com/adhishvairagade" target="_blank">github.com/adhishvairagade</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width contact-submit">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading">Processing...</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
